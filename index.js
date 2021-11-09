@@ -19,7 +19,7 @@ class SortedList {
   }
 
   max() {
-    if (this.items.length === 0) {
+    if (this.length === 0) {
       throw new Error("EmptySortedList");
     } else {
       return Math.max(...this.items);
@@ -51,7 +51,7 @@ class SortedList {
     // } else {
     //   throw new Error("EmptySortedList");
     // }
-    if (this.items.length === 0) {
+    if (this.length === 0) {
       throw new Error("EmptySortedList");
     } else {
       return Math.min(...this.items);
@@ -66,13 +66,13 @@ class SortedList {
   }
 
   avg() {
-    if (this.items.length === 0) {
+    if (this.length === 0) {
       throw new Error("EmptySortedList");
     } else {
       let total = this.items.reduce((acc, cur) => {
         return acc + cur;
       }, 0);
-      return total / this.items.length;
+      return total / this.length;
     }
   }
 }
